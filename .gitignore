@@ -32,6 +32,9 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.DS_Store
+.env.local
+.env
 
 # vercel
 .vercel
@@ -39,3 +42,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Logs
+firebase-debug.log
+npm-debug.log*
+
+# Dependencias (si quieres ignorar node_modules, aunque Next.js ya lo hace por defecto)
+node_modules/
+
+# Builds
+.next/
+out/
+
