@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Tumba() {
   const [open, setOpen] = useState(false)
-  const [showCouple, setShowCouple] = useState(false)
+  //const [showCouple, setShowCouple] = useState(false)
   const [showVictory, setShowVictory] = useState(false)
 
   /* useEffect(() => {
