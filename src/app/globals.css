@@ -24,3 +24,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: 'BurbankBigCondensed-Black';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://static-assets-prod.epicgames.com/fortnite/static/webpack/c5d323c99493dd76432d4f531b8cc329.woff') format('woff');
+}

@@ -10,7 +10,8 @@ export default function Home() {
         Feliz domingo de resurrección
       </h1>
       <p className="mt-0 text-lg text-gray-700">
-        Si Jesus resucitó, no veo porque nuestra relación no puede hacer lo mismo 😉<br />
+      Si Jesús resucitó,
+      ¿por qué no tú y yo en Fortnite otra vez, bro?<br />
       </p>
       </div>
       <Cielo />
