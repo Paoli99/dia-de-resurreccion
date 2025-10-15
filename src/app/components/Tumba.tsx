@@ -18,7 +18,7 @@ export default function Tumba() {
   }, [])
  */
 
-  useEffect(() => {
+/*   useEffect(() => {
     const timer = setTimeout(() => setOpen(true), 500)
     const victoryTimer = setTimeout(() => setShowVictory(true), 1000) // Después de la animación de piedra
     return () => {
@@ -26,6 +26,12 @@ export default function Tumba() {
       clearTimeout(victoryTimer)
     }
   }, [])
+ */
+  const handleStoneClick = () => {
+    if (open) return // evita clicks repetidos
+    setOpen(true)
+    setTimeout(() => setShowVictory(true), 1000) // tras la animación de la piedra
+  }
 
   return (
     <div className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 w-[500px] sm:w-[1200px] h-[500px] sm:h-[550px] z-20">
@@ -41,9 +47,11 @@ export default function Tumba() {
         src="/assets/piedra.png"
         alt="Piedra"
         initial={{ x: 0 }}
-        animate={{ x: open ? 140 : 0, rotate: open ? 360 : 0  }}
+        animate={{ x: open ? 140 : 0, rotate: open ? 720 : 0  }}
         transition={{ duration: 1 }}
-        className="absolute bottom-[32%] sm:bottom-[25%] left-[25%] w-[200px] sm:w-[300px] sm:left-[50%] h-auto object-contain z-20"
+        className="absolute bottom-[32%] sm:bottom-[25%] left-[25%] w-[200px] sm:w-[300px] sm:left-[32%] h-auto object-contain z-20"
+         onClick={handleStoneClick}
+        whileTap={{ scale: 0.95 }}
       />
 
 {/* {showCouple && (
@@ -55,7 +63,7 @@ export default function Tumba() {
           transition={{ duration: 1.2 }}
           className="absolute bottom-[22%] left-1/2 -translate-x-1/2 w-[160px] sm:w-[240px] h-auto object-contain z-30"
         />
-      )} */}
+      )} 
 
 {showVictory && (
        <div
@@ -82,6 +90,14 @@ export default function Tumba() {
          </span>
        </span>
      </div>
+     
+      )}*/}
+
+      {showVictory && (
+       <span className="absolute left-1/2 -translate-x-1/2 top-1/3 text-white text-center text-xl sm:text-3xl font-bold z-30">
+       Si Jesús resucitó,
+      ¿por qué nuestra relación no puede hacer lo mismo? 🤍
+        </span>
      
       )}
     </div>
